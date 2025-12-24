@@ -1,0 +1,11 @@
+<launch>
+    <node pkg="esp32_motor_control" type="esp32_bridge.py" name="esp32_bridge" output="screen">
+        <param name="port" value="/dev/ttyUSB0" />
+        <param name="baudrate" value="115200" />
+        <param name="timeout" value="1.0" />
+        <!-- 自动任务时间裕度（秒）：在理论运行时间基础上额外等待的时间
+             若希望两条指令几乎无停顿，可将其设为 0.0
+             例如：<param name="time_margin" value="0.0" /> -->
+        <param name="time_margin" value="0.0" />
+    </node>
+</launch>
