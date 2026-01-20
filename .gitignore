@@ -5,6 +5,11 @@
 # ROS/colcon logs
 /log/
 
+# ROS2 workspace artifacts (when ros2_ws is kept inside this repo)
+/ros2_ws/build/
+/ros2_ws/install/
+/ros2_ws/log/
+
 # Python cache
 __pycache__/
 *.pyc

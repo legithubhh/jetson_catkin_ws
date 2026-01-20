@@ -2,6 +2,9 @@
 
 ## Big picture (ROS ↔ ESP32)
 - This repo is a ROS catkin workspace. The main package is `src/esp32_motor_control`.
+- A ROS2 Humble port (colcon) also exists under `ros2_ws/src/`:
+  - `ros2_ws/src/esp32_motor_control_msgs` (interfaces)
+  - `ros2_ws/src/esp32_motor_control` (rclpy nodes)
 - The ROS↔ESP32 boundary is the node `scripts/esp32_bridge.py`: it converts ROS `MotorCommand` messages into a serial text protocol and schedules “auto tasks”.
 - Data flow:
   - Publish manual control to `/esp32/motor_cmd` (`esp32_motor_control/MotorCommand`) → `esp32_bridge.py` → serial command line.
